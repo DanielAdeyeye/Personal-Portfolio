@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+    margin: 0;     
+}
+
+/*This is to make sure the whole page is set to Flexbox*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+}
+
+/*Container Has to be defined Flex 1 auto is used to make the whole container flexible */
+.container {
+    max-width: 100%;
+    flex: 1 auto;
+}
+
+.item3 {
+    width: 100%;
+}
+
+/*Header*/
+.header {
+    display: flex;
+    background-color:#4e4b4b;
+    padding: 0.5em;
+    justify-content: space-around;
+}
+
+/*Nav*/
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 1rem;
+    background-color: #035096;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.nav-ul {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    color: #0478e1;
+    padding: 0;
+    list-style-type: none;
+
+}
+
+.nav-ul li a {
+    display: inline-block;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.hamburger {
+    background-color:transparent;
+    display: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.hamburger:focus {
+    outline: none;
+}
+
+li a:hover {
+    color:#04e16d;
+}
+
+.fa:hover {
+    color: #04e16d;
+}
+
+
+
+.hamburger:focus {
+    outline: none;
+}
+
+/*Fonts*/
+
+h1 {
+    color: white;
+    font-family: 'Lora', serif;
+    font-size: 3em;
+}
+
+p {
+    color: black;
+    background-color: #ffffff;
+    font-size: 0.75em;
+}
+
+h3 {
+    color: black;
+    font-size: 3em;
+}
+
+h4 {
+    padding-top: 1rem;
+    color: black;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+h6 {
+    color: white;
+    font-size: 1em;
+}
+
+.class {
+    color: black;
+    background-color: #4e4b4b;
+}
+
+/*Styling of the links */
+
+
+/*Contact*/
+.about {
+    background-color: #035096;
+    text-align: center;
+    color: #ffffff;
+}
+
+/*About Section*/
+.about-container {
+    display: flex;
+}
+
+.about_image {
+    height: auto;
+    max-width:250px;
+    max-height: 100%;
+    width: 100%;
+    align-self: flex-start;
+}
+
+.about-text {
+    display: flex;
+    text-align: right;
+    justify-content: right;
+    line-height: 7em;
+}
+
+#about-me {
+    display: flex;
+    background-color: #ffffff;
+    text-align: center;
+    justify-content: center;
+}
+
+/*Forms*/
+.form {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+  background-color:#757171;
+  color: #ffffff;
+  padding-bottom: 10px;
+}
+
+/*Footer Section*/
+.footer, .header {
+    flex-shrink: 0;
+    background-color: #4e4b4b;
+}
+
+.footer {
+    display:flex;
+    justify-content: space-around;
+    padding: 10px;
+
+}
+
+/*Colours for each box*/
+
+.fa{ display: inline-block;
+    font-style: normal;
+    color: #ffffff;
+    font-variant: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-stretch: normal;
+    line-height: 1;
+    font-family: FontAwesome;
+    font-size: 2em;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.fa-linkedin {
+    display: inline-block;
+    color: #ffffff;
+}
+
+/*Media Queries*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 767px) {
+    .nav-ul { 
+        display: none;
+    }
+
+    .nav-ul.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .nav-ul li a {
+        display: block;
+        list-style-type: none;
+        padding: 10px;
+    }       
+    .item3 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .about-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .about_image {
+        display: flex;
+        max-width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .about-container {
+        display: flex;
+        justify-content: space-around;
+    }
+   a {
+    font-size: 1.25rem;}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .about-container {
+        display: flex;
+        justify-content: space-around;
+    }
+    a { font-size: 1.75rem;
+    }
+}
